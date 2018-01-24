@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Popup{
+            constructor(htext='欢迎光临',btext="好好学习,天天向上"){
+                this.btext=btext
+                this.htext=htext
+                this.init()
+                
+            }
+            init(){
+                let click=this.mydata('button','but','点击')
+                document.body.append(click)
+               click.addEventListener('click',()=>{
+                this.myclick()
+
+               })
+
+            }
+            mydata(data,clss,text=""){
+                let dat=document.createElement(data);
+                dat.className=clss;
+                dat.innerText=text
+                return dat
+                  
+            }
+            myclick(){
+                
+                this.mask=this.mydata('div','mask')
+                this.box=this.mydata('div','box')
+                this.head=this.mydata('p','head',this.htext)
+                this.bottom=this.mydata('div','bot',this.btext)
+                this.det=this.mydata('span','det','X')
+                this.sub=this.mydata('button','sub','确定')
+                 document.body.append(this.mask)
+                 this.mask.append(this.box)
+                 this.box.append(this.head)
+                 this.box.append(this.bottom)
+                 this.bottom.append(this.sub)
+                 this.head.append(this.det)
+                 this.sub.addEventListener('click',()=>{
+                     this.myhide()
+                 })
+                 this.det.addEventListener('click',()=>{
+                     this.myhide()
+                 })
+                 
+
+            }
+            myhide(){
+                this.mask.parentNode.removeChild(this.mask)
+            }
+            
+            
+        }
+        let popup=new Popup()
+       
+       
+    </script>
+</body>
+</html>

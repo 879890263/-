@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.but{
+    margin: 5px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5%;
+    border: none;
+    outline: none;
+}
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5)
+}
+.box{
+    width: 500px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -150px;
+    border:1px solid #ccc;
+    border-radius: 5%;
+    background: white;
+    position: absolute;
+}
+.head{
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    border-bottom: 1px solid #ccc;
+}
+.bot{
+
+    width: 94%;
+    height: 200px;
+    padding:0 3px;
+    font-size: 20px;
+    overflow: hidden;
+}
+.det{
+    font-size: 30px;
+    position: absolute;
+    right: 35px;
+    top: 1px;
+    cursor: pointer;
+}
+.sub{
+    
+    width: 100px;
+    height: 30px;
+    border-radius: 5%;
+    border: none;
+    position: absolute;
+    outline: none;
+    left: 50%;
+    margin-left: -50px;
+    
+    bottom: 20%;   
+}
